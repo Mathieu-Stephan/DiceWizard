@@ -13,7 +13,7 @@ http.createServer(function(req, res) {
 }).listen(8080);
 
 app.listen(3000, () => {
-  console.log("Donjons et Dragon, la grande avanture !");
+  console.log("Donjons et Dragon, la grande aventure !");
 });
 
 const code = 'Test';

@@ -25,15 +25,19 @@ module.exports = {
         const canvas = createCanvas(2000, 2000)
         const ctx = canvas.getContext('2d')
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
-        ctx.font = '100px sans-serif'
+        ctx.font = '500px sans-serif'
         ctx.fillStyle = '#ffffff'
         ctx.fillText(result, 800, 1000)
         const body = await interaction.user.displayAvatarURL({ extension: 'jpg' })
         const avatar = await loadImage(body)
-        //add avatar at the top right
-        ctx.drawImage(avatar, 1500, 0, 500, 500)
+        //add rounded avatar at the top right
+        ctx.beginPath()
+        ctx.arc(1800, 200, 100, 0, Math.PI * 2, true)
+        ctx.closePath()
+        ctx.clip()
+        ctx.drawImage(avatar, 1700, 100, 200, 200)
         //add text : answer at the top left
-        ctx.font = '50px sans-serif'
+        ctx.font = '200px sans-serif'
         ctx.fillStyle = color
         ctx.fillText(answer, 0, 100)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')

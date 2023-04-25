@@ -33,11 +33,11 @@ module.exports = {
 
 
         const embed = new Discord.EmbedBuilder()
-            .setColor(color)
-            .setTitle('Jet de dé 20')
-            .setDescription(answer)
-            .setImage('attachment://20-sided-dice.png')
-            .setTimestamp()
+            title = "Jet de d20",
+            description = answer,
+            color = color,
+            image = { url: 'attachment://20-sided-dice.png' }
+            
         await interaction.reply({ embeds: [embed] , files: [attachment] })
     }
 }

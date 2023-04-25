@@ -30,11 +30,12 @@ module.exports = {
         ctx.fillText(result, 800, 1000)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')
 
-        const message = new Discord.EmbedBuilder()
-            .setColor(color)
+        const message = new Discord.RichEmbed()
+            .setColor(color)   
             .setTitle(answer)
+            .attachFiles(attachment)
             .setImage('attachment://20-sided-dice.png')
-        await interaction.reply({ embeds: [message] , files: [attachment] })
+        await interaction.reply({ embeds: [message] })
 
 
 

@@ -11,15 +11,15 @@ module.exports = {
         let answer = ""
         let color = "#0099ff"
         if(result == 1){ 
-            answer = "Vous avez fait un 1, c'est un échec critique !"
+            answer = "Vous avez fait un **1**, c'est un échec critique !"
             color = "#ff0000"
 
         }
         else if(result == 20) {
-            answer = "Vous avez fait un 20, c'est une réussite critique !"
+            answer = "Vous avez fait un **20**, c'est une réussite critique !"
             color = "#00ff00"
         }
-        else answer = `Vous avez fait un ${result}`
+        else answer = `Vous avez fait un **${result}**`
 
         let size = '400px'
         let location = 750
@@ -47,11 +47,11 @@ module.exports = {
         const text = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle(answer)
+            .setDescription(`Jet de dé 20 de ${interaction.user.username}`)
             .setImage('attachment://20-sided-dice.png')
-            .setFooter(`Demandé par ` + interaction.user.username)
             .setTimestamp()
 
-        await interaction.reply({ embeds: [text], files: [attachment] })
+        await interaction.reply({ embeds: [text], files: [attachment] });
 
         
 

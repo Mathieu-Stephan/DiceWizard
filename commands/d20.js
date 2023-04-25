@@ -47,10 +47,10 @@ module.exports = {
         const text = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle(answer)
-            .setFooter(`Demandé par ` + interaction.user.username + " • " + interaction.user.avatarURL())
+            .setFooter(`Demandé par ` + interaction.user.username)
             .setTimestamp()
 
-        await interaction.reply({ files: [attachment] } + { embeds: [text] })
+        await interaction.reply({ files: [attachment] } , { embeds: [text] })
 
         
 

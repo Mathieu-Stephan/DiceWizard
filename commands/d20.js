@@ -50,7 +50,7 @@ module.exports = {
             .setFooter(`Demandé par ` + interaction.user.username)
             .setTimestamp()
 
-        await interaction.reply({ files: [attachment] } , { embeds: [text] })
+        await interaction.reply({ embeds: [text], files: [attachment] })
 
         
 

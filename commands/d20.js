@@ -26,9 +26,9 @@ module.exports = {
         const ctx = canvas.getContext('2d')
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
         //add text : result in the middle
-        ctx.font = '500px sans-serif'
+        ctx.font = '450px sans-serif'
         ctx.fillStyle = '#ffffff'
-        ctx.fillText(result, 1000, 1000)
+        ctx.fillText(result, 900, 1100)
         const body = await interaction.user.displayAvatarURL({ extension: 'jpg' })
         const avatar = await loadImage(body)
         //add rounded avatar at the top right

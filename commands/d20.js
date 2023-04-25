@@ -33,9 +33,8 @@ module.exports = {
         const message = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle(answer)
-            .attachFiles(attachment)
             .setImage('attachment://20-sided-dice.png')
-        await interaction.reply({ embeds: [message] })
+        await interaction.reply({ embeds: [message] , files: [attachment] })
 
 
 

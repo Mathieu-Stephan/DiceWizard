@@ -32,12 +32,16 @@ module.exports = {
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')
 
 
-        const embed = new Discord.EmbedBuilder()
-            title = "Jet de d20",
-            description = answer,
-            color = color,
-            image = { url: 'attachment://20-sided-dice.png' }
-            
-        await interaction.reply({ embeds: [embed] , files: [attachment] })
+        const file = new AttachmentBuilder('./20-sided-dice.png');
+
+        const exampleEmbed = {
+            title: 'Some title',
+            image: {
+                url: 'attachment://20-sided-dice.png',
+            },
+        };
+
+        channel.send({ embeds: [exampleEmbed], files: [file] });
+
     }
 }

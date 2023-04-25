@@ -20,18 +20,15 @@ module.exports = {
         }
         else answer = `Vous avez fait un **${result}**`
 
-        let size = '400px'
-        let location = 750
-        if(result < 10) size = '500px', location = 850
 
         const background = await loadImage('./8-sided-dice.png')
         const canvas = createCanvas(2000, 2000)
         const ctx = canvas.getContext('2d')
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
         //add text : result in the middle
-        ctx.font = size + ' sans-serif'
+        ctx.font = '400px sans-serif'
         ctx.fillStyle = '#ffffff'
-        ctx.fillText(result, location, 1200)
+        ctx.fillText(result, 825, 1200)
         const body = await interaction.user.displayAvatarURL({ extension: 'jpg' })
         const avatar = await loadImage(body)
         //add rounded avatar at the top right

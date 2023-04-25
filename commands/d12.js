@@ -21,8 +21,8 @@ module.exports = {
         else answer = `Vous avez fait un **${result}**`
 
         let size = '400px'
-        let location = 750
-        if(result < 10) size = '500px', location = 850
+        let location = 720
+        if(result < 10) size = '500px', location = 840
 
         const background = await loadImage('./12-sided-dice.png')
         const canvas = createCanvas(2000, 2000)
@@ -31,7 +31,7 @@ module.exports = {
         //add text : result in the middle
         ctx.font = size + ' sans-serif'
         ctx.fillStyle = '#ffffff'
-        ctx.fillText(result, location, 1200)
+        ctx.fillText(result, location, 1150)
         const body = await interaction.user.displayAvatarURL({ extension: 'jpg' })
         const avatar = await loadImage(body)
         //add rounded avatar at the top right

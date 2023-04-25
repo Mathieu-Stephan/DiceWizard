@@ -47,6 +47,7 @@ module.exports = {
         const text = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle(answer)
+            .setImage('attachment://20-sided-dice.png')
             .setFooter(`Demandé par ` + interaction.user.username)
             .setTimestamp()
 

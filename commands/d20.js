@@ -28,7 +28,7 @@ module.exports = {
         //add text : result in the middle
         ctx.font = '500px sans-serif'
         ctx.fillStyle = '#ffffff'
-        ctx.fillText(result, 1000, 1200)
+        ctx.fillText(result, 1000, 1000)
         const body = await interaction.user.displayAvatarURL({ extension: 'jpg' })
         const avatar = await loadImage(body)
         //add rounded avatar at the top right
@@ -40,7 +40,7 @@ module.exports = {
         //add text : answer at the top left
         ctx.font = '100px sans-serif'
         ctx.fillStyle = color
-        ctx.fillText(answer, 0, 100)
+        ctx.fillText(answer, 100, 100)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')
         await interaction.reply({ files: [attachment] })
 

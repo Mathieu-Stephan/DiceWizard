@@ -28,14 +28,21 @@ module.exports = {
         ctx.font = '100px sans-serif'
         ctx.fillStyle = '#ffffff'
         ctx.fillText(result, 800, 1000)
+        const body = await interaction.user.displayAvatarURL({ extension: 'jpg' })
+        const avatar = await loadImage(body)
+        ctx.drawImage(avatar, 800, 1100, 400, 400)
+        //add text : answer
+        ctx.font = '50px sans-serif'
+        ctx.fillStyle = color
+        ctx.fillText(answer, 800, 1600)
+        //add text : username
+        ctx.font = '50px sans-serif'
+        ctx.fillStyle = '#ffffff'
+        ctx.fillText(interaction.user.username, 800, 1700)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')
+        await interaction.reply({ files: [attachment] })
 
-        const message = new Discord.RichEmbed()
-            .setColor(color)   
-            .setTitle(answer)
-            .attachFiles(attachment)
-            .setImage('attachment://20-sided-dice.png')
-        await interaction.reply({ embeds: [message] })
+        
 
 
 

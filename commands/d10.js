@@ -21,8 +21,8 @@ module.exports = {
         else answer = `Vous avez fait un **${result}**`
 
         let size = '400px'
-        let location = 720
-        if(result < 10) size = '500px', location = 840
+        let location = 750
+        if(result < 10) size = '500px', location = 850
 
         const background = await loadImage('./10-sided-dice.png')
         const canvas = createCanvas(2000, 2000)

@@ -29,7 +29,7 @@ module.exports = {
         ctx.font = '100px sans-serif'
         ctx.fillStyle = '#ffffff'
         ctx.fillText(result, 800, 1000)
-        const attachment = new Discord.MessageAttachment(canvas.toBuffer(), '20-sided-dice.png')
+        const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')
 
 
         const embed = new Discord.EmbedBuilder()

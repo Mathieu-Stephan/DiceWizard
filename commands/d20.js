@@ -20,13 +20,17 @@ module.exports = {
             color = "#00ff00"
         }
         else answer = `Vous avez fait un ${result}`
+
+        let size = '400px'
+        if(result < 10) size = '500px'
+
         
         const background = await loadImage('./20-sided-dice.png')
         const canvas = createCanvas(2000, 2000)
         const ctx = canvas.getContext('2d')
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
         //add text : result in the middle
-        ctx.font = '450px sans-serif'
+        ctx.font = size + ' sans-serif'
         ctx.fillStyle = '#ffffff'
         ctx.fillText(result, 900, 1100)
         const body = await interaction.user.displayAvatarURL({ extension: 'jpg' })

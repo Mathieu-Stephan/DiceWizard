@@ -23,7 +23,7 @@ module.exports = {
 
         let size = '400px'
         let location = 800
-        if(result < 10) size = '500px', location = 900
+        if(result < 10) size = '500px', location = 850
 
         
         const background = await loadImage('./20-sided-dice.png')

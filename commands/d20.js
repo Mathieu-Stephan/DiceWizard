@@ -42,12 +42,15 @@ module.exports = {
         ctx.closePath()
         ctx.clip()
         ctx.drawImage(avatar, 1700, 100, 200, 200)
-        //add text : answer at the top left
-        ctx.font = '100px sans-serif'
-        ctx.fillStyle = color
-        ctx.fillText(answer, 100, 100)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')
-        await interaction.reply({ files: [attachment] })
+
+        const text = new Discord.EmbedBuilder()
+            .setColor(color)
+            .setTitle(answer)
+            .setFooter(`Demandé par ${interaction.user.username}`, interaction.user.displayAvatarURL({ dynamic: true }))
+            .setTimestamp()
+
+        await interaction.reply({ files: [attachment] } + text)
 
         
 

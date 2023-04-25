@@ -31,7 +31,7 @@ module.exports = {
         //add text : result in the middle
         ctx.font = size + ' sans-serif'
         ctx.fillStyle = '#ffffff'
-        ctx.fillText(result, location, 1150)
+        ctx.fillText(result, location, 1200)
         const body = await interaction.user.displayAvatarURL({ extension: 'jpg' })
         const avatar = await loadImage(body)
         //add rounded avatar at the top right

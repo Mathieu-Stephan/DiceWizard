@@ -22,10 +22,21 @@ module.exports = {
         }
         else answer = `Vous avez fait un ${result}`
         
+        const background = await loadImage('./20-sided-dice.png')
+        const canvas = createCanvas(2000, 2000)
+        const ctx = canvas.getContext('2d')
+        ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
+        ctx.font = '100px sans-serif'
+        ctx.fillStyle = '#ffffff'
+        ctx.fillText(result, 800, 1000)
+        const attachment = new Discord.MessageAttachment(canvas.toBuffer(), '20-sided-dice.png')
+
+
         const embed = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle('Jet de dé 20')
-            .setDescription(`Vous avez fait un ${result}`)
+            .setDescription(answer)
+            .attachFiles(attachment)
             .setTimestamp()
         await interaction.reply({ embeds: [embed] });
     }

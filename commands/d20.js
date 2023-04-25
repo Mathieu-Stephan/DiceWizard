@@ -1,6 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js')
 const Discord = require('discord.js')
-const { EmbedBuilder } = require('discord.js');
 const { createCanvas, loadImage, encode } = require('canvas')
 
 module.exports = {
@@ -31,17 +30,14 @@ module.exports = {
         ctx.fillText(result, 800, 1000)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')
 
+        const message = new Discord.MessageBuilder()
+            .setColor(color)
+            .setTitle(answer)
+            .attachFiles(attachment)
+            .setImage('attachment://20-sided-dice.png')
+        await interaction.reply({ embeds: [message] })
 
-        const file = new AttachmentBuilder('./20-sided-dice.png');
 
-        const exampleEmbed = {
-            title: 'Some title',
-            image: {
-                url: 'attachment://20-sided-dice.png',
-            },
-        };
-
-        channel.send({ embeds: [exampleEmbed], files: [file] });
 
     }
 }

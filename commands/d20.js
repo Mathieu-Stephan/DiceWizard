@@ -30,7 +30,7 @@ module.exports = {
         ctx.fillText(result, 800, 1000)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')
 
-        const message = new Discord.MessageBuilder()
+        const message = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle(answer)
             .attachFiles(attachment)

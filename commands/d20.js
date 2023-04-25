@@ -22,7 +22,7 @@ module.exports = {
         else answer = `Vous avez fait un ${result}`
 
         let size = '400px'
-        let location = 800
+        let location = 750
         if(result < 10) size = '500px', location = 850
 
         

@@ -4,7 +4,7 @@ const { createCanvas, loadImage, encode } = require('canvas')
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('about dicewizard')
+        .setName('about-dicewizard')
         .setDescription('Affiche les informations sur le bot'),
     async execute(interaction) {
         const text = new Discord.EmbedBuilder()

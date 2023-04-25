@@ -36,8 +36,8 @@ module.exports = {
             .setColor(color)
             .setTitle('Jet de dé 20')
             .setDescription(answer)
-            .attachFiles(attachment)
+            .setImage('attachment://20-sided-dice.png')
             .setTimestamp()
-        await interaction.reply({ embeds: [embed] });
+        await interaction.reply({ embeds: [embed] , files: [attachment] })
     }
 }

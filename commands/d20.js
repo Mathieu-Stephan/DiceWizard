@@ -50,7 +50,7 @@ module.exports = {
             .setFooter(`Demandé par ${interaction.user.username}`, interaction.user.displayAvatarURL({ dynamic: true }))
             .setTimestamp()
 
-        await interaction.reply({ files: [attachment] } + text)
+        await interaction.reply({ files: [attachment] } + { embeds: [text] })
 
         
 

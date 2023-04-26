@@ -27,8 +27,12 @@ module.exports = {
         let sortsReady = sorts.toString();
         let competences = charSheet.skills;
         let competencesReady = competences.toString();
+        let stats = charSheet.stats;
+        let statsReady = stats.toString();
+
         competencesReady = competencesReady.replace(/,/g, ', ');
         sortsReady = sortsReady.replace(/,/g, ', ');
+        statsReady = statsReady.replace(/,/g, ', ');
 
         let icon = interaction.user.avatarURL();
 
@@ -40,10 +44,10 @@ module.exports = {
             .setThumbnail(icon)
             .setDescription('Voici votre fiche de personnage')
             .addFields(
-                { name: 'Nom', value: nom, inline: true },
+                { name: 'Nom', value: nom + ", NV " + niveauText, inline: true },
                 { name: 'Race', value: race, inline: true },
-                { name: 'Classe', value: classe },
-                { name: 'Niveau', value: niveauText },
+                { name: 'Classe', value: classe, inline: true },
+                { name: 'Stats', value: statsReady, inline: true },
                 { name: 'Sorts', value: sortsReady },
                 { name: 'Compétences', value: competencesReady }
             )

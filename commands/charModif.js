@@ -2,13 +2,14 @@ const { SlashCommandBuilder } = require('discord.js')
 const Discord = require('discord.js')
 
 const param = [
-    'name',
-    'race',
-    'class',
-    'level',
-    'skills',
-    'stats',
-    'spells'
+    {name: 'name', value: 'name'},
+    {name: 'race', value:'race'},
+    {name: 'class', value: 'class'},
+    {name: 'level', value: 'level'},
+    {name: 'skills', value: 'skills'},
+    {name: 'stats', value: 'stats'},
+    {name: 'spells', value: 'spells'}
+
 ]
 
 module.exports = {

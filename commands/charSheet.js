@@ -54,8 +54,8 @@ module.exports = {
                 { name: 'Race', value: race, inline: true },
                 { name: 'Classe', value: classe, inline: true },
                 { name: 'Stats', value: statsReady, inline: true },
-                { name: 'Sorts', value: sortsReady },
-                { name: 'Compétences', value: competencesReady }
+                { name: 'Sorts', value: sortsReady, inline: true },
+                { name: 'Compétences', value: competencesReady, inline: true }
             )
             .setFooter({ text: 'DiceWizard V0.1.1' })
             .setTimestamp()

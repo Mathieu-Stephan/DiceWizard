@@ -61,7 +61,7 @@ module.exports = {
                 { name: 'Nom', value: nom + ", NV " + niveauText, inline: true },
                 { name: 'Race', value: race, inline: true },
                 { name: 'Classe', value: classe, inline: true },
-                { name: 'Stats', value: statsReady, inline: true },
+                { name: 'Stats', value: statsReady, inline: false },
                 { name: 'Sorts', value: sortsReady, inline: true },
                 { name: 'Compétences', value: competencesReady, inline: true }
             )

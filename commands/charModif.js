@@ -93,9 +93,9 @@ module.exports = {
 
         if(param == 'stats'){
             statNum = parseInt(interaction.options.getString('valeur'));
-            //value must be a number
-            if(isNaN(statNum)){
-                await interaction.reply({ content: 'La valeur doit être un nombre !', ephemeral: true });
+            //value must be in the form of {"Force":Value0,"Dextérité":Value1,"Constitution":Value2,"Intelligence":Value3,"Sagesse":Value4,"Charisme":Value5}
+            if(!interaction.options.getString('valeur').startsWith('{') || !interaction.options.getString('valeur').endsWith('}')){
+                await interaction.reply({ content: 'La valeur doit être au format {"Force":Value0,"Dextérité":Value1,"Constitution":Value2,"Intelligence":Value3,"Sagesse":Value4,"Charisme":Value5} !', ephemeral: true });
                 return;
             }
             //value must be between 1 and 30

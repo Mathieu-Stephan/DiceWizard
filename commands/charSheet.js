@@ -15,8 +15,11 @@ module.exports = {
         let nom = charSheet.name;
         let classe = charSheet.class;
         let niveau = charSheet.level;
+        let niveauText = niveau.toString();
         let sorts = charSheet.spells;
+        let sortsReady = sorts.toString();
         let competences = charSheet.skills;
+        let competencesReady = competences.toString();
         console.log(nom, classe, niveau, sorts, competences);
 
         const embed = new Discord.EmbedBuilder()
@@ -27,9 +30,9 @@ module.exports = {
             .addFields(
                 { name: 'Nom', value: nom },
                 { name: 'Classe', value: classe },
-                { name: 'Niveau', value: niveau },
-                { name: 'Sorts', value: sorts },
-                { name: 'Compétences', value: competences }
+                { name: 'Niveau', value: niveauText },
+                { name: 'Sorts', value: sortsReady },
+                { name: 'Compétences', value: competencesReady }
             )
             .setFooter({ text: 'DiceWizard V0.1' })
             .setTimestamp()

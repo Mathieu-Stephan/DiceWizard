@@ -20,6 +20,7 @@ module.exports = {
         //create the embed
         let nom = charSheet.name;
         let classe = charSheet.class;
+        let race = charSheet.race;
         let niveau = charSheet.level;
         let niveauText = niveau.toString();
         let sorts = charSheet.spells;
@@ -39,7 +40,8 @@ module.exports = {
             .setThumbnail(icon)
             .setDescription('Voici votre fiche de personnage')
             .addFields(
-                { name: 'Nom', value: nom },
+                { name: 'Nom', value: nom, inline: true },
+                { name: 'Race', value: race, inline: true },
                 { name: 'Classe', value: classe },
                 { name: 'Niveau', value: niveauText },
                 { name: 'Sorts', value: sortsReady },

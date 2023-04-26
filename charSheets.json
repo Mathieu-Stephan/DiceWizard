@@ -1,20 +1,35 @@
 {
     "659854501708300299" :
-        {
-            "name": "Ewan McGeggor",
-            "race": "Humain",
-            "class": "Paladin",
-            "level": 3,
-            "skills": ["Apposition des mains", "Châtiment"],
-            "stats": {
-                "str": 14,
-                "dex": 12,
-                "con": 10,
-                "int": 8,
-                "wis": 8,
-                "cha": 9
-            },
-            "spells": ["Bouclier de la foi"]
+    {
+        "name": "Ewan McGeggor",
+        "race": "Humain",
+        "class": "Paladin",
+        "level": 3,
+        "skills": ["Apposition des mains", "Châtiment"],
+        "stats": {
+            "str": 14,
+            "dex": 12,
+            "con": 10,
+            "int": 8,
+            "wis": 8,
+            "cha": 9
+        },
+        "spells": ["Bouclier de la foi"]
 
-        }
+    },
+
+    "461798583126196235":
+    {
+
+    },
+
+    "713712942746566736":
+    {
+
+    },
+
+    "712325129014738964":
+    {
+
+    }
 }

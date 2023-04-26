@@ -115,7 +115,11 @@ module.exports = {
         //modifies the value (if param is skills or spells, add the value to the array)
         if(param == 'skills' || param == 'spells'){
             charSheets[interaction.options.getUser('user').id][interaction.options.getString('paramètre')].push(interaction.options.getString('valeur'));
-        }else{
+        }
+        else if(param == 'stats'){
+            charSheets[interaction.options.getUser('user').id][interaction.options.getString('paramètre')] = JSON.parse(interaction.options.getString('valeur'));
+        }
+        else{
             charSheets[interaction.options.getUser('user').id][interaction.options.getString('paramètre')] = interaction.options.getString('valeur');
         }
 

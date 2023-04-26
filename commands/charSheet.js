@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('charSheet')
+        .setName('charsheet')
         .setDescription('Affiche la fiche de personnage'),
     async execute(interaction) {
         //get data from charSheets.json

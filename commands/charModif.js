@@ -31,7 +31,8 @@ module.exports = {
             .setRequired(true)
         ),
     async execute(interaction) {
-        if(!interaction.member.permissions.has('ADMINISTRATOR')){
+        const member = interaction.member;
+        if(!member.roles.cache.some(role => role.name === '👑-Maître du Jeu-👑')){
             await interaction.reply({ content: 'Vous n\'avez pas la permission d\'utiliser cette commande !', ephemeral: true });
             return;
         }

@@ -16,7 +16,7 @@ module.exports = {
                 { name: 'Des suggestions ?', value: 'Si vous avez des suggestions, n\'hésitez pas à me contacter sur Discord !' },
                 { name: 'Un problème ?', value: 'Si vous rencontrez un problème, vous pouvez me faire un retour sur Discord !' }
             )
-            .setFooter({ text: 'DiceWizard V0.1' })
+            .setFooter({ text: 'DiceWizard V0.1.1' })
             .setTimestamp()
 
 

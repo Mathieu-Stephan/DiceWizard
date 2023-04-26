@@ -1,11 +1,11 @@
 {
-    "659854501708300299": [
+    "659854501708300299" :
         {
             "name": "Ewan McGeggor",
             "race": "Humain",
             "class": "Paladin",
             "level": 3,
-            "capacity": ["Apposition des mains", "Châtiment"],
+            "skills": ["Apposition des mains", "Châtiment"],
             "stats": {
                 "str": 14,
                 "dex": 12,
@@ -17,5 +17,4 @@
             "spells": ["Bouclier de la foi"]
 
         }
-    ]
 }

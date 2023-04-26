@@ -35,6 +35,9 @@ module.exports = {
             await interaction.reply({ content: 'Vous n\'avez pas la permission d\'utiliser cette commande !', ephemeral: true });
             return;
         }
+        param = interaction.options.getString('paramètre');
+        console.log(param);
+
         //get data from charSheets.json
         const fs = require('fs');
         const charSheets = JSON.parse(fs.readFileSync('./charSheets.json', 'utf8'));
@@ -45,28 +48,28 @@ module.exports = {
         }
 
         //checks for each parameter if the value is valid
-        if(interaction.options.getString('paramètre') == 'name'){
+        if(param == 'name'){
             if(interaction.options.getString('valeur').length > 20){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
-        if(interaction.option.getString('paramètre') == 'race'){
+        if(param == 'race'){
             if(interaction.options.getString('valeur').length > 20){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
-        if(interaction.option.getString('paramètre') == 'class'){
+        if(param == 'class'){
             if(interaction.options.getString('valeur').length > 20){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
-        if(interaction.option.getString('paramètre') == 'level'){
+        if(param == 'level'){
             valeurNum = parseInt(interaction.options.getString('valeur'));
             //value must be a number
             if(isNaN(valeurNum)){
@@ -80,14 +83,14 @@ module.exports = {
             }
         }
 
-        if(interaction.option.getString('paramètre') == 'skills'){
+        if(param == 'skills'){
             if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
-        if(interaction.option.getString('paramètre') == 'stats'){
+        if(param == 'stats'){
             statNum = parseInt(interaction.options.getString('valeur'));
             //value must be a number
             if(isNaN(statNum)){
@@ -101,7 +104,7 @@ module.exports = {
             }
         }
 
-        if(interaction.option.getString('paramètre') == 'spells'){
+        if(param == 'spells'){
             if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
@@ -109,7 +112,7 @@ module.exports = {
         }
 
         //modifies the value (if param is skills or spells, add the value to the array)
-        if(interaction.option.getString('paramètre') == 'skills' || interaction.option.getString('paramètre') == 'spells'){
+        if(param == 'skills' || param == 'spells'){
             charSheets[interaction.options.getUser('user').id][interaction.options.getString('paramètre')].push(interaction.options.getString('valeur'));
         }else{
             charSheets[interaction.options.getUser('user').id][interaction.options.getString('paramètre')] = interaction.options.getString('valeur');

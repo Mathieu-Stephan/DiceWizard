@@ -15,6 +15,14 @@ module.exports = {
             return;
         }
 
+        function modifier(lv){
+            let mod = Math.floor((lv - 10) / 2);
+            if(mod >= 0){
+                mod = '+' + mod.toString();
+            }
+            return mod;
+        }
+
         //get the character sheet of the user inside data
         const charSheet = charSheets[interaction.user.id];
         //create the embed
@@ -31,7 +39,7 @@ module.exports = {
         //make stats have there name
         let statsReady = [];
         for(stat in stats){
-            statsReady.push(stat + ": " + stats[stat]);
+            statsReady.push(stat + ": " + stats[stat] + " (" + modifier(stats[stat]) + ")");
         }
 
 

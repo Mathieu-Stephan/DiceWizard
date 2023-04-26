@@ -9,10 +9,34 @@
         "spells":["Bouclier de la foi"]
     },
         
-    "461798583126196235":{},
+    "461798583126196235":{
+        "name":"Soon",
+        "race":"Soon",
+        "class":"Soon",
+        "level":0,
+        "skills":[],
+        "stats":{"str":0,"dex":0,"con":0,"int":0,"wis":0,"cha":0},
+        "spells":[]
+    },
 
-    "713712942746566736":{},
+    "713712942746566736":{
+        "name":"Soon",
+        "race":"Soon",
+        "class":"Soon",
+        "level":0,
+        "skills":[],
+        "stats":{"str":0,"dex":0,"con":0,"int":0,"wis":0,"cha":0},
+        "spells":[]
+    },
 
-    "712325129014738964":{}
+    "712325129014738964":{
+        "name":"Soon",
+        "race":"Soon",
+        "class":"Soon",
+        "level":0,
+        "skills":[],
+        "stats":{"str":0,"dex":0,"con":0,"int":0,"wis":0,"cha":0},
+        "spells":[]
+    }
 
 }

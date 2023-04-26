@@ -5,7 +5,7 @@
         "class":"Paladin",
         "level":"4",
         "skills":["Apposition des mains","Châtiment","Conduit Divin"],
-        "stats":{"str":14,"dex":12,"con":10,"int":8,"wis":8,"cha":9},
+        "stats":{"Force":14,"Dextérité":12,"Constitution":10,"Intelligence":8,"Sagesse":8,"Charisme":9},
         "spells":["Bouclier de la foi"]
     },
         
@@ -15,7 +15,7 @@
         "class":"Soon",
         "level":0,
         "skills":[],
-        "stats":{"str":0,"dex":0,"con":0,"int":0,"wis":0,"cha":0},
+        "stats":{"Force":0,"Dextérité":0,"Constitution":0,"Intelligence":0,"Sagesse":0,"Charisme":0},
         "spells":[]
     },
 
@@ -25,7 +25,7 @@
         "class":"Soon",
         "level":0,
         "skills":[],
-        "stats":{"str":0,"dex":0,"con":0,"int":0,"wis":0,"cha":0},
+        "stats":{"Force":0,"Dextérité":0,"Constitution":0,"Intelligence":0,"Sagesse":0,"Charisme":0},
         "spells":[]
     },
 
@@ -35,7 +35,7 @@
         "class":"Soon",
         "level":0,
         "skills":[],
-        "stats":{"str":0,"dex":0,"con":0,"int":0,"wis":0,"cha":0},
+        "stats":{"Force":0,"Dextérité":0,"Constitution":0,"Intelligence":0,"Sagesse":0,"Charisme":0},
         "spells":[]
     }
 

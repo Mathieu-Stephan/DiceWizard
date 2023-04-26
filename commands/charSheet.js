@@ -28,11 +28,17 @@ module.exports = {
         let competences = charSheet.skills;
         let competencesReady = competences.toString();
         let stats = charSheet.stats;
-        let statsReady = stats.toString();
+        //make stats have there name
+        let statsReady = [];
+        for(stat in stats){
+            statsReady.push(stat + ": " + stats[stat]);
+        }
+
 
         competencesReady = competencesReady.replace(/,/g, ', ');
         sortsReady = sortsReady.replace(/,/g, ', ');
-        statsReady = statsReady.replace(/,/g, ', ');
+        statsReady = statsReady.toString();
+        statsReady = statsReady.replace(/,/g, '\n');
 
         let icon = interaction.user.avatarURL();
 

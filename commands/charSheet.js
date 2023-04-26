@@ -9,6 +9,12 @@ module.exports = {
         //get data from charSheets.json
         const fs = require('fs');
         const charSheets = JSON.parse(fs.readFileSync('./charSheets.json', 'utf8'));
+        //check if the user has a character sheet
+        if (!(interaction.user.id in charSheets)) {
+            await interaction.reply({ content: 'Vous n\'avez pas de fiche de personnage !', ephemeral: true });
+            return;
+        }
+
         //get the character sheet of the user inside data
         const charSheet = charSheets[interaction.user.id];
         //create the embed

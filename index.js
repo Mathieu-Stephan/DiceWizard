@@ -70,6 +70,14 @@ function handle(message) {
     console.log(txt);
 
     //Stuff here
+
+    //debug print all charSheets
+    if (txt[0] == "!debug_allCharSheets") {
+      const charSheets = JSON.parse(fs.readFileSync('./charSheets.json', 'utf8'));
+      console.log(charSheets);
+      message.channel.send("Check the console !");
+    }
+
     
   } catch (TypeError) {
     console.error("TypeError");

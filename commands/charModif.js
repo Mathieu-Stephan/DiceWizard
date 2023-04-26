@@ -19,10 +19,10 @@ module.exports = {
             option.setName('user').setDescription('L\'utilisateur à modifier').setRequired(true)
         )
         .addStringOption(option =>
-            option.setName('Paramètre').setDescription('Le paramètre à modifier').addChoices(param).setRequired(true)
+            option.setName('paramètre').setDescription('Le paramètre à modifier').addChoices(param).setRequired(true)
         )
         .addStringOption(option =>
-            option.setName('Valeur').setDescription('La valeur à modifier').setRequired(true)
+            option.setName('valeur').setDescription('La valeur à modifier').setRequired(true)
         ),
     async execute(interaction) {
         if(!interaction.member.permissions.has('ADMINISTRATOR')){

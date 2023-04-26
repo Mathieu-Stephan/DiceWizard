@@ -13,7 +13,7 @@ const param = [
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('charModif')
+        .setName('charmodif')
         .setDescription('Modifie la fiche de personnage [ADMIN]')
         .addUserOption(option => 
             option.setName('user').setDescription('L\'utilisateur à modifier').setRequired(true)

@@ -43,36 +43,31 @@ module.exports = {
             await interaction.reply({ content: 'Cet utilisateur n\'a pas de fiche de personnage !', ephemeral: true });
             return;
         }
-        //check if the parameter is valid
-        if(!param.includes(interaction.options.getString('Paramètre'))){
-            await interaction.reply({ content: 'Ce paramètre n\'existe pas !', ephemeral: true });
-            return;
-        }
 
         //checks for each parameter if the value is valid
-        if(interaction.options.getString('Paramètre') == 'name'){
-            if(interaction.options.getString('Valeur').length > 20){
+        if(interaction.options.getString('paramètre') == 'name'){
+            if(interaction.options.getString('valeur').length > 20){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
-        if(interaction.option.getString('Paramètre') == 'race'){
-            if(interaction.options.getString('Valeur').length > 20){
+        if(interaction.option.getString('paramètre') == 'race'){
+            if(interaction.options.getString('valeur').length > 20){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
-        if(interaction.option.getString('Paramètre') == 'class'){
-            if(interaction.options.getString('Valeur').length > 20){
+        if(interaction.option.getString('paramètre') == 'class'){
+            if(interaction.options.getString('valeur').length > 20){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
-        if(interaction.option.getString('Paramètre') == 'level'){
-            valeurNum = parseInt(interaction.options.getString('Valeur'));
+        if(interaction.option.getString('paramètre') == 'level'){
+            valeurNum = parseInt(interaction.options.getString('valeur'));
             //value must be a number
             if(isNaN(valeurNum)){
                 await interaction.reply({ content: 'La valeur doit être un nombre !', ephemeral: true });
@@ -85,15 +80,15 @@ module.exports = {
             }
         }
 
-        if(interaction.option.getString('Paramètre') == 'skills'){
-            if(interaction.options.getString('Valeur').length > 40){
+        if(interaction.option.getString('paramètre') == 'skills'){
+            if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
-        if(interaction.option.getString('Paramètre') == 'stats'){
-            statNum = parseInt(interaction.options.getString('Valeur'));
+        if(interaction.option.getString('paramètre') == 'stats'){
+            statNum = parseInt(interaction.options.getString('valeur'));
             //value must be a number
             if(isNaN(statNum)){
                 await interaction.reply({ content: 'La valeur doit être un nombre !', ephemeral: true });
@@ -106,18 +101,18 @@ module.exports = {
             }
         }
 
-        if(interaction.option.getString('Paramètre') == 'spells'){
-            if(interaction.options.getString('Valeur').length > 40){
+        if(interaction.option.getString('paramètre') == 'spells'){
+            if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
         //modifies the value (if param is skills or spells, add the value to the array)
-        if(interaction.option.getString('Paramètre') == 'skills' || interaction.option.getString('Paramètre') == 'spells'){
-            charSheets[interaction.options.getUser('user').id][interaction.options.getString('Paramètre')].push(interaction.options.getString('Valeur'));
+        if(interaction.option.getString('paramètre') == 'skills' || interaction.option.getString('paramètre') == 'spells'){
+            charSheets[interaction.options.getUser('user').id][interaction.options.getString('paramètre')].push(interaction.options.getString('valeur'));
         }else{
-            charSheets[interaction.options.getUser('user').id][interaction.options.getString('Paramètre')] = interaction.options.getString('Valeur');
+            charSheets[interaction.options.getUser('user').id][interaction.options.getString('paramètre')] = interaction.options.getString('valeur');
         }
 
         //writes the new data in charSheets.json

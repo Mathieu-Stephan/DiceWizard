@@ -1,29 +1,34 @@
 const { SlashCommandBuilder } = require('discord.js')
 const Discord = require('discord.js')
 
-const param = [
-    {name: 'name', value: 'name'},
-    {name: 'race', value:'race'},
-    {name: 'class', value: 'class'},
-    {name: 'level', value: 'level'},
-    {name: 'skills', value: 'skills'},
-    {name: 'stats', value: 'stats'},
-    {name: 'spells', value: 'spells'}
-
-]
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('charmodif')
         .setDescription('Modifie la fiche de personnage [ADMIN]')
         .addUserOption(option => 
-            option.setName('user').setDescription('L\'utilisateur à modifier').setRequired(true)
+            option.setName('user')
+            .setDescription('L\'utilisateur à modifier')
+            .setRequired(true)
         )
         .addStringOption(option =>
-            option.setName('paramètre').setDescription('Le paramètre à modifier').addChoices(param).setRequired(true)
+            option.setName('paramètre')
+            .setDescription('Le paramètre à modifier')
+            .addChoices(
+                {name: 'name', value: 'name'},
+                {name: 'race', value:'race'},
+                {name: 'class', value: 'class'},
+                {name: 'level', value: 'level'},
+                {name: 'skills', value: 'skills'},
+                {name: 'stats', value: 'stats'},
+                {name: 'spells', value: 'spells'}
+            )
+            .setRequired(true)
         )
         .addStringOption(option =>
-            option.setName('valeur').setDescription('La valeur à modifier').setRequired(true)
+            option.setName('valeur')
+            .setDescription('La valeur à modifier')
+            .setRequired(true)
         ),
     async execute(interaction) {
         if(!interaction.member.permissions.has('ADMINISTRATOR')){

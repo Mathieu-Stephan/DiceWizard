@@ -20,12 +20,17 @@ module.exports = {
         let sortsReady = sorts.toString();
         let competences = charSheet.skills;
         let competencesReady = competences.toString();
-        console.log(nom, classe, niveau, sorts, competences);
+        competencesReady = competencesReady.replace(/,/g, ', ');
+        sortsReady = sortsReady.replace(/,/g, ', ');
+
+        let icon = interaction.user.avatarURL();
+
 
         const embed = new Discord.EmbedBuilder()
             .setColor('#0099ff')
             .setAuthor({ name: 'DiceWizard', iconURL: 'https://cdn.discordapp.com/app-icons/1100141622328557688/df91a59c63c429e963031a5af7d8a165.png?size=256' })
-            .setTitle('Fiche de personnage')
+            .setTitle('Fiche de personnage de ' + interaction.user.username)
+            .setThumbnail(icon)
             .setDescription('Voici votre fiche de personnage')
             .addFields(
                 { name: 'Nom', value: nom },

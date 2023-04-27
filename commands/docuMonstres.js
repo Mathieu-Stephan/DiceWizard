@@ -6,7 +6,7 @@ module.exports = {
         .setName('documonstres')
         .setDescription('Affiche la documentation des monstres'),
     async execute(interaction) {
-        const text = new Discord.MessageEmbed()
+        const text = new Discord.EmbedBuilder()
             .setColor('#0099ff')
             .setAuthor({ name: 'DiceWizard', iconURL: 'https://cdn.discordapp.com/app-icons/1100141622328557688/df91a59c63c429e963031a5af7d8a165.png?size=256' })
             .setTitle('Documentation des monstres')

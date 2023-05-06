@@ -93,10 +93,10 @@ module.exports = {
         }
 
         resultats = results.join(', ');
-        resultats = toString(resultats);
+        resultats = resultats.toString();
         total = results.reduce((a, b) => a + b, 0);
-        total = toString(total);
-        
+        total = total.toString();
+
         //create the embed
         const text = new Discord.EmbedBuilder()
             .setColor('#0099ff')

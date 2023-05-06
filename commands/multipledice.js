@@ -92,15 +92,20 @@ module.exports = {
             }
         }
 
+        resultats = results.join(', ');
+        resultats = toString(resultats);
+        total = results.reduce((a, b) => a + b, 0);
+        total = toString(total);
+        
         //create the embed
         const text = new Discord.EmbedBuilder()
             .setColor('#0099ff')
             .setAuthor({ name: 'DiceWizard', iconURL: 'https://cdn.discordapp.com/app-icons/1100141622328557688/df91a59c63c429e963031a5af7d8a165.png?size=256' })
             .setTitle('Résultats')
-            .setDescription('Voici les résultats de votre lancer de dés')
+            .setDescription('Voici les résultats de votre lancer de ' + numberOfDice+ " " + diceType)
             .addFields(
-                { name: 'Résultats', value: results.join(', ') },
-                { name: 'Total', value: results.reduce((a, b) => a + b, 0) }
+                { name: 'Résultats', value: resultats},
+                { name: 'Total', value: total }
             )
             .setFooter({ text: 'DiceWizard V0.1.2' })
             .setTimestamp();

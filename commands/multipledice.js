@@ -92,11 +92,6 @@ module.exports = {
             }
         }
 
-        else{
-            await interaction.reply({ content: 'Une erreur est survenue !', ephemeral: true });
-            return;
-        }
-
         //create the embed
         const text = new Discord.EmbedBuilder()
             .setColor('#0099ff')

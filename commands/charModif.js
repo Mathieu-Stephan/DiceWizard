@@ -21,7 +21,8 @@ module.exports = {
                 {name: 'level', value: 'level'},
                 {name: 'skills', value: 'skills'},
                 {name: 'stats', value: 'stats'},
-                {name: 'spells', value: 'spells'}
+                {name: 'spells', value: 'spells'},
+                {name: 'hp', value: 'hp'}
             )
             .setRequired(true)
         )
@@ -111,6 +112,16 @@ module.exports = {
                 return;
             }
         }
+
+        if(param == 'hp'){
+            valeurNum = parseInt(interaction.options.getString('valeur'));
+            //value must be a number
+            if(isNaN(valeurNum)){
+                await interaction.reply({ content: 'La valeur doit être un nombre !', ephemeral: true });
+                return;
+            }
+        }
+
 
         //modifies the value (if param is skills or spells, add the value to the array)
         if(param == 'skills' || param == 'spells'){

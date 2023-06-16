@@ -36,6 +36,8 @@ module.exports = {
     let competences = charSheet.skills;
     let competencesReady = competences.toString();
     let stats = charSheet.stats;
+    let hp = charSheet.hp;
+    hp = hp.toString();
     //make stats have there name
     let statsReady = [];
     for (stat in stats) {
@@ -59,7 +61,7 @@ module.exports = {
       .setDescription('Voici votre fiche de personnage')
       .addFields(
         { name: 'Nom', value: nom + ", NV " + niveauText, inline: true },
-        { name: 'Race', value: race, inline: true },
+        { name: 'Race', value: race + ", " + hp + " HP", inline: true },
         { name: 'Classe', value: classe, inline: true },
         { name: 'Stats', value: statsReady, inline: false },
         { name: 'Sorts', value: sortsReady, inline: true },

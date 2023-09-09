@@ -16,7 +16,7 @@ app.listen(3000, () => {
   console.log("Donjons et Dragon, la grande aventure !");
 });
 
-const code = 'Test';
+const code = fs.readFileSync("./index.js", "utf8");
 
 app.get("/", (req, res) => {
   res.send(code);

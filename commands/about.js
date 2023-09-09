@@ -11,7 +11,7 @@ module.exports = {
             .setColor('#0099ff')
             .setAuthor({ name: 'DiceWizard', iconURL: 'https://cdn.discordapp.com/app-icons/1100141622328557688/df91a59c63c429e963031a5af7d8a165.png?size=256' })
             .setTitle('A propos de DiceWizard')
-            .setDescription('DiceWizard est un bot Discord qui permet de faire des jets de dés. Il est développé par Poulpi#4747')
+            .setDescription('DiceWizard est un bot Discord qui permet de faire des jets de dés. Il est développé par poulpitor.')
             .addFields(
                 { name: 'Des suggestions ?', value: 'Si vous avez des suggestions, n\'hésitez pas à me contacter sur Discord !' },
                 { name: 'Un problème ?', value: 'Si vous rencontrez un problème, vous pouvez me faire un retour sur Discord !' }

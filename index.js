@@ -16,10 +16,15 @@ app.listen(3000, () => {
   console.log("Donjons et Dragon, la grande aventure !");
 });
 
-const code = fs.readFileSync("./index.js", "utf8");
+const codeHtml = fs.readFileSync("./index.html", "utf8");
+const codeCss = fs.readFileSync("./style.css", "utf8");
+const favicon = fs.readFileSync("./favicon.ico", "utf8");
+
 
 app.get("/", (req, res) => {
-  res.send(code);
+  res.send(codeHtml);
+  res.send(codeCss);
+  res.send(favicon);
 });
 
 

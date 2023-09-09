@@ -107,7 +107,7 @@ module.exports = {
                 { name: 'Résultats', value: resultats},
                 { name: 'Total', value: total }
             )
-            .setFooter({ text: 'DiceWizard V0.1.2' })
+            .setFooter({ text: 'DiceWizard V0.1.3' })
             .setTimestamp();
 
         await interaction.reply({ embeds: [text] });

@@ -17,14 +17,10 @@ app.listen(3000, () => {
 });
 
 const codeHtml = fs.readFileSync("./index.html", "utf8");
-const codeCss = fs.readFileSync("./style.css", "utf8");
-const favicon = fs.readFileSync("./favicon.ico", "utf8");
 
 
 app.get("/", (req, res) => {
   res.send(codeHtml);
-  res.send(codeCss);
-  res.send(favicon);
 });
 
 

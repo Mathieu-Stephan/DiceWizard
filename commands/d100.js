@@ -16,7 +16,7 @@ module.exports = {
 
         }
         else if(result == 20) {
-            answer = "Vous avez fait un **20**, c'est une réussite super critique !"
+            answer = "Vous avez fait un **100**, c'est une réussite super critique !"
             color = "#00ff00"
         }
         else answer = `Vous avez fait un **${result}**`
@@ -47,7 +47,7 @@ module.exports = {
         const text = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle(answer)
-            .setDescription(`Jet de dé 20 de ${interaction.user.username}`)
+            .setDescription(`Jet de dé 100 de ${interaction.user.username}`)
             .setImage('attachment://100-sided-dice.png')
             .setTimestamp()
 

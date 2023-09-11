@@ -57,6 +57,7 @@ function handle(message) {
   }
 
   try {
+    /*
     console.log(message.content);
     var txt = message.cleanContent;
     txt = txt.split(" ");
@@ -70,6 +71,7 @@ function handle(message) {
     }
     console.log(txt);
 
+    */
     //Stuff here
 
     //debug print all charSheets

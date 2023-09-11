@@ -20,7 +20,8 @@ module.exports = {
             .setTimestamp()
 
 
-        await interaction.reply({ embeds: [text] });
+            await interaction.deferReply({ ephemeral: false });
+            interaction.editReply({ embeds: [text] });
 
     }
 }

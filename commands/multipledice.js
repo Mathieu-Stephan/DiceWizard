@@ -110,6 +110,7 @@ module.exports = {
             .setFooter({ text: 'DiceWizard V0.1.3' })
             .setTimestamp();
 
-        await interaction.reply({ embeds: [text] });
+        await interaction.deferReply({ ephemeral: false });
+        interaction.editReply({ embeds: [text] });
     },
 };

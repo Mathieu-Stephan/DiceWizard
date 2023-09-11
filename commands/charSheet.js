@@ -70,7 +70,8 @@ module.exports = {
       .setFooter({ text: 'DiceWizard V0.1.3' })
       .setTimestamp()
     //send the embed
-    await interaction.reply({ embeds: [embed] });
+    await interaction.deferReply({ ephemeral: false });
+    interaction.editReply({ embeds: [text] });
 
 
 

@@ -51,7 +51,7 @@ module.exports = {
             .setImage('attachment://20-sided-dice.png')
             .setTimestamp()
 
-        await interaction.deferReply({ ephemeral: true });
+        await interaction.deferReply({ ephemeral: false });
         interaction.editReply({ embeds: [text], files: [attachment], ephemeral: false  });
 
         

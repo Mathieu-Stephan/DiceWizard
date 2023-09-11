@@ -50,7 +50,7 @@ module.exports = {
             .setTimestamp()
 
         await interaction.deferReply({ ephemeral: true });
-        interaction.editReply({ embeds: [text], files: [attachment] });
+        interaction.editReply({ embeds: [text], files: [attachment] , ephemeral: false });
 
     }
 }

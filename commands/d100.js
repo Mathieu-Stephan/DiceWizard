@@ -15,7 +15,7 @@ module.exports = {
             color = "#ff0000"
 
         }
-        else if(result == 20) {
+        else if(result == 100) {
             answer = "Vous avez fait un **100**, c'est une réussite super critique !"
             color = "#00ff00"
         }
@@ -24,6 +24,7 @@ module.exports = {
         let size = '400px'
         let location = 750
         if(result < 10) size = '500px', location = 850
+        else if(result < 100) size = '400px', location = 720
 
         
         const background = await loadImage('./100-sided-dice.png')

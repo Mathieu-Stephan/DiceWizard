@@ -30,7 +30,7 @@ module.exports = {
             return;
       
           }
-      
+          modifieur = ""
           if (interaction.options.getInteger('bonus') < 0) {
               let modifieur = "-"   
           }

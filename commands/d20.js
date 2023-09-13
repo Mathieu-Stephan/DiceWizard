@@ -5,7 +5,12 @@ const { createCanvas, loadImage, encode } = require('canvas')
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('d20')
-        .setDescription('Faite un jet de dé 20'),
+        .setDescription('Faite un jet de dé 20')
+        .addIntegerOption(option =>
+            option.setName('bonus')
+            .setDescription('Le bonus à ajouter au jet de dé')
+            .setRequired(false)
+        ),
     async execute(interaction) {
         let result = Math.floor(Math.random() * 20) + 1;
         let answer = ""
@@ -47,7 +52,7 @@ module.exports = {
         const text = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle(answer)
-            .setDescription(`Jet de dé 20 de ${interaction.user.username}`)
+            .setDescription(`Jet de dé 20 de ${interaction.user.username}` + (interaction.options.getInteger('bonus') ? ` avec un bonus de ${interaction.options.getInteger('bonus')} pour un total de **${result + interaction.options.getInteger('bonus')}**` : ""))
             .setImage('attachment://20-sided-dice.png')
             .setTimestamp()
 

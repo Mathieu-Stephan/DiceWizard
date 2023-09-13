@@ -14,9 +14,9 @@ module.exports = {
             .setDescription('DiceWizard est un bot Discord qui permet de faire des jets de dés. Il est développé par poulpitor.')
             .addFields(
                 { name: 'Des suggestions ?', value: 'Si vous avez des suggestions, n\'hésitez pas à me contacter sur Discord !' },
-                { name: 'Un problème ?', value: 'Si vous rencontrez un problème, vous pouvez me faire un retour sur Discord !' }
+                { name: 'Un problème ?', value: 'Si vous rencontrez un problème, vous pouvez me faire un retour sur Github : https://github.com/Mathieu-Stephan/DiceWizard' }
             )
-            .setFooter({ text: 'DiceWizard V0.1.3' })
+            .setFooter({ text: 'DiceWizard V0.1.4' })
             .setTimestamp()
 
 

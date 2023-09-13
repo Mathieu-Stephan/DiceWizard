@@ -67,7 +67,7 @@ module.exports = {
         { name: 'Sorts', value: sortsReady, inline: true },
         { name: 'Compétences', value: competencesReady, inline: true }
       )
-      .setFooter({ text: 'DiceWizard V0.1.3' })
+      .setFooter({ text: 'DiceWizard V0.1.4' })
       .setTimestamp()
     //send the embed
     await interaction.deferReply({ ephemeral: false });

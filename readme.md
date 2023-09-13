@@ -9,13 +9,13 @@ It is currently in development, and is not yet recommended for use in production
 To use DiceWizard, you must first invite it to your server. You can do this by clicking [here](https://discord.com/api/oauth2/authorize?client_id=1100141622328557688&permissions=0&scope=bot).  
 Once DiceWizard is in your server, you can use the `/roll` command to roll dice. For example, `/roll d6` will roll a six-sided die. You can also roll multiple dice at once, for example `/multipledice 3 d6` will roll three six-sided dice.  
 
-## Current features
+## Current features
 - Roll a single die
 - Roll multiple dice
 - Print a custom character sheet
 - Modify a character sheet (only the 👑-Maître du Jeu-👑 can do this)
 
-## Planned features
+## Planned features
 - Roll a die with modifiers
 - Roll multiple dice with modifiers
 - Delete a character sheet (only the 👑-Maître du Jeu-👑 will do this)
@@ -35,14 +35,14 @@ Pour utiliser DiceWizard, vous devez d'abord l'inviter sur votre serveur. Vous p
 
 Une fois que DiceWizard est dans votre serveur, vous pouvez utiliser la commande `/roll` pour lancer des dés. Par exemple, `/roll d6` lancera un dé à six faces. Vous pouvez également lancer plusieurs dés à la fois, par exemple `/multipledice 3 d6` lancera trois dés à six faces.  
 
-## Fonctionnalités actuelles
+## Fonctionnalités actuelles
 - Lancer un seul dé
 - Lancer plusieurs dés
 - Imprimer une feuille de personnage personnalisée
 - Modifier une feuille de personnage (seul le 👑-Maître du Jeu-👑 peut le faire)
   
 
-## Fonctionnalités prévues
+## Fonctionnalités prévues
 - Lancer un dé avec des modificateurs
 - Lancer plusieurs dés avec des modificateurs
 - Supprimer une feuille de personnage (seul le 👑-Maître du Jeu-👑 le fera)

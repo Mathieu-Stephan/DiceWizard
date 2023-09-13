@@ -16,11 +16,19 @@ module.exports = {
         let answer = "Vous avez fait un **" + result + "**"
         let color = "#0099ff"
 
-        if (interaction.options.getInteger('bonus') > 100) {
-            await interaction.reply({ content: 'Le bonus ne peut pas être supérieur à 100', ephemeral: true });
+        if (interaction.options.getInteger('bonus') > 100 || interaction.options.getInteger('bonus') == 0) {
+            await interaction.reply({ content: 'Le bonus ne peut pas être supérieur à 100 ou être nul', ephemeral: true });
             return;
       
-        }
+          }
+      
+          if (interaction.options.getInteger('bonus') < 0) {
+              let modifieur = "-"   
+          }
+          else {
+              let modifieur = "+"
+          }
+      
         
         const background = await loadImage('./6-sided-dice.png')
         const canvas = createCanvas(2000, 2000)
@@ -39,7 +47,7 @@ module.exports = {
         if (interaction.options.getInteger('bonus')) {
             ctx.font = '200px sans-serif'
             ctx.fillStyle = '#ffffff'
-            ctx.fillText(`+${interaction.options.getInteger('bonus')}`, 100, 300)
+            ctx.fillText( modifieur +`${interaction.options.getInteger('bonus')}`, 100, 300)
         }
         ctx.clip()
         ctx.drawImage(avatar, 1700, 100, 200, 200)

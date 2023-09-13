@@ -31,6 +31,7 @@ module.exports = {
     if (result < 10) size = '500px', location = 850
 
     let bonus = interaction.options.getInteger('bonus')
+    if(bonus == null) bonus = 0
 
 
 

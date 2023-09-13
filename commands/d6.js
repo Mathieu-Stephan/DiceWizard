@@ -17,6 +17,8 @@ module.exports = {
         let color = "#0099ff"
 
         let bonus = interaction.options.getInteger('bonus')
+
+        if(bonus == null) bonus = 0
         
         const background = await loadImage('./6-sided-dice.png')
         const canvas = createCanvas(2000, 2000)

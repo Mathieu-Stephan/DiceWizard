@@ -26,6 +26,8 @@ module.exports = {
         else answer = `Vous avez fait un **${result}**`
 
         let bonus = interaction.options.getInteger('bonus')
+
+        if(bonus == null) bonus = 0
       
 
 

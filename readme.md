@@ -40,11 +40,13 @@ Une fois que DiceWizard est dans votre serveur, vous pouvez utiliser la commande
 - Lancer plusieurs dés
 - Imprimer une feuille de personnage personnalisée
 - Modifier une feuille de personnage (seul le 👑-Maître du Jeu-👑 peut le faire)
+<br>
 
 ## Fonctionnalités prévues
 - Lancer un dé avec des modificateurs
 - Lancer plusieurs dés avec des modificateurs
 - Supprimer une feuille de personnage (seul le 👑-Maître du Jeu-👑 le fera)
+<br>
 
 ## Et ???
 Si vous avez des questions, des suggestions ou des rapports de bugs, veuillez me contacter sur Discord à `poulpitor.`<br>

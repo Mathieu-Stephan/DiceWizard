@@ -30,6 +30,11 @@ module.exports = {
         let location = 750
         if(result < 10) size = '500px', location = 850
 
+        if(interaction.options.getInteger('bonus') > 100){
+            await interaction.reply({ content: 'Le bonus ne peut pas être supérieur à 100', ephemeral: true });
+            return;
+            
+        }
         
         const background = await loadImage('./20-sided-dice.png')
         const canvas = createCanvas(2000, 2000)
@@ -45,6 +50,12 @@ module.exports = {
         ctx.beginPath()
         ctx.arc(1800, 200, 100, 0, Math.PI * 2, true)
         ctx.closePath()
+        //if bonus, add it to top left
+        if(interaction.options.getInteger('bonus')){
+            ctx.font = '400px sans-serif'
+            ctx.fillStyle = '#ffffff'
+            ctx.fillText(`+${interaction.options.getInteger('bonus')}`, 100, 1200)
+        }
         ctx.clip()
         ctx.drawImage(avatar, 1700, 100, 200, 200)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '20-sided-dice.png')

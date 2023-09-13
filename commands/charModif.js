@@ -51,21 +51,21 @@ module.exports = {
 
         //checks for each parameter if the value is valid
         if(param == 'name'){
-            if(interaction.options.getString('valeur').length > 20){
+            if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
         if(param == 'race'){
-            if(interaction.options.getString('valeur').length > 20){
+            if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
         }
 
         if(param == 'class'){
-            if(interaction.options.getString('valeur').length > 20){
+            if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
             }
@@ -79,7 +79,7 @@ module.exports = {
                 return;
             }
             //value must be between 1 and 20
-            if(valeurNum < 1 || valeurNum > 20){
+            if(valeurNum < 1 || valeurNum > 40){
                 await interaction.reply({ content: 'La valeur doit être comprise entre 1 et 20 !', ephemeral: true });
                 return;
             }
@@ -101,7 +101,7 @@ module.exports = {
             }
             //value must be between 1 and 30
             if(statNum < 1 || statNum > 30){
-                await interaction.reply({ content: 'La valeur doit être comprise entre 1 et 20 !', ephemeral: true });
+                await interaction.reply({ content: 'La valeur doit être comprise entre 1 et < 30 !', ephemeral: true });
                 return;
             }
         }

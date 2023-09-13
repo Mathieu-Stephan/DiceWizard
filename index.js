@@ -55,9 +55,9 @@ function handle(message) {
   if (message.author.bot) {
     return;
   }
-
+ /*
   try {
-    /*
+   
     console.log(message.content);
     var txt = message.cleanContent;
     txt = txt.split(" ");
@@ -71,7 +71,7 @@ function handle(message) {
     }
     console.log(txt);
 
-    */
+    
     //Stuff here
 
     //debug print all charSheets
@@ -85,7 +85,9 @@ function handle(message) {
   } catch (TypeError) {
     console.error("TypeError");
   }
-}
+  */
+  }
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);

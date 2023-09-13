@@ -25,18 +25,7 @@ module.exports = {
         }
         else answer = `Vous avez fait un **${result}**`
 
-        if (interaction.options.getInteger('bonus') > 100 || interaction.options.getInteger('bonus') == 0) {
-            await interaction.reply({ content: 'Le bonus ne peut pas être supérieur à 100 ou être nul', ephemeral: true });
-            return;
-      
-          }
-          modifieur = ""
-          if (interaction.options.getInteger('bonus') < 0) {
-              let modifieur = "-"   
-          }
-          else {
-              let modifieur = "+"
-          }
+        let bonus = interaction.options.getInteger('bonus')
       
 
         let size = '400px'
@@ -58,10 +47,10 @@ module.exports = {
         ctx.arc(1800, 200, 100, 0, Math.PI * 2, true)
         ctx.closePath()
         if (interaction.options.getInteger('bonus')) {
-            ctx.font = '200px sans-serif'
+            ctx.font = '100px sans-serif'
             ctx.fillStyle = '#ffffff'
-            ctx.fillText( modifieur +`${interaction.options.getInteger('bonus')}`, 100, 300)
-        }
+            ctx.fillText(`Avec : ${bonus}`, 100, 300)
+          }
         ctx.clip()
         ctx.drawImage(avatar, 1700, 100, 200, 200)
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), '12-sided-dice.png')
@@ -69,7 +58,7 @@ module.exports = {
         const text = new Discord.EmbedBuilder()
             .setColor(color)
             .setTitle(answer)
-            .setDescription(`Jet de dé 12 de ${interaction.user.username}`+ (interaction.options.getInteger('bonus') ? ` avec un bonus de ${interaction.options.getInteger('bonus')} pour un total de **${result + interaction.options.getInteger('bonus')}**` : ""))
+            .setDescription(`Jet de dé 12 de ${interaction.user.username}`+ `\n` + `Bonus : ${bonus} pour un total de **${result + bonus}**`)
             .setImage('attachment://12-sided-dice.png')
             .setTimestamp()
 

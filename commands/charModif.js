@@ -58,7 +58,7 @@ module.exports = {
                 "stats":{"Force":0,"Dextérité":0,"Constitution":0,"Intelligence":0,"Sagesse":0,"Charisme":0},
                 "spells":[""]
             }
-            await interaction.reply({ content: charSheets.stringify, ephemeral: true });
+            await interaction.reply({ content: 'L\'utilisateur n\'avait pas de fiche de personnage, il a donc été ajouté !', ephemeral: true });
             return;
         }
 

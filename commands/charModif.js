@@ -38,8 +38,8 @@ module.exports = {
             return;
         }
         param = interaction.options.getString('paramètre');
-        console.log(param);
 
+    
         //get data from charSheets.json
         const fs = require('fs');
         const charSheets = JSON.parse(fs.readFileSync('./charSheets.json', 'utf8'));
@@ -58,6 +58,7 @@ module.exports = {
                 "stats":{"Force":0,"Dextérité":0,"Constitution":0,"Intelligence":0,"Sagesse":0,"Charisme":0},
                 "spells":[""]
             }
+            console.log("test" + charSheets);
             await interaction.reply({ content: 'L\'utilisateur n\'avait pas de fiche de personnage, il a donc été ajouté !', ephemeral: true });
             return;
         }

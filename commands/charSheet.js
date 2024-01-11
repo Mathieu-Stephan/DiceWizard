@@ -4,7 +4,12 @@ const Discord = require('discord.js')
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('charsheet')
-    .setDescription('Affiche la fiche de personnage'),
+    .setDescription('Affiche la fiche de personnage')
+    .addUserOption(option => 
+      option.setName('user')
+      .setDescription('L\'utilisateur à modifier')
+      .setRequired(true)
+  ),
   async execute(interaction) {
     //get data from charSheets.json
     const fs = require('fs');
@@ -23,8 +28,10 @@ module.exports = {
       return mod;
     }
 
+    user = interaction.options.getUser('user').id;
+
     //get the character sheet of the user inside data
-    const charSheet = charSheets[interaction.user.id];
+    const charSheet = charSheets[user]
     console.log(JSON.stringify(charSheet));
     //create the embed
     let nom = charSheet.name;

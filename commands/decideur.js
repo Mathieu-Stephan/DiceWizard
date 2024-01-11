@@ -4,15 +4,16 @@ const Discord = require('discord.js')
 const reponse = [
     "Oui bien sûr !",
     "Non, je ne pense pas.",
-    "Tu peux toujours essayer...",
-    "C'est une bonne idée !",
-    "Je ne suis pas sûr...",
-    "Je ne sais pas...",
-    "C'est la pire idée que j'ai jamais entendu !",
-    "Je ne peux pas te répondre.... Je boude !",
-    "Je ne sais pas quoi te dire...",
-    "Un sort pourra peut-être t'aider a répondre à cette question...",
-    "Je ne suis pas sûr que ce soit une bonne idée..."
+    "Oui",
+    "Non",
+    "Peut-être",
+    "Je ne sais pas",
+    "C'est la pire question que j'ai jamais entendu",
+    "Je ne peux pas répondre à cette question",
+    "Il faudrait être stupide pour poser cette question",
+    "Je ne sais pas, mais je pense que oui",
+    "Je ne sais pas, mais je pense que non",
+    "Aucune idée, je suis qu'un bot"
 ]
 
 module.exports = {

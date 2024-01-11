@@ -14,8 +14,9 @@ module.exports = {
     //get data from charSheets.json
     const fs = require('fs');
     const charSheets = JSON.parse(fs.readFileSync('./charSheets.json', 'utf8'));
+    user = interaction.options.getUser('user').id;
     //check if the user has a character sheet
-    if (!(interaction.user.id in charSheets)) {
+    if (!(user in charSheets)) {
       await interaction.reply({ content: 'Vous n\'avez pas de fiche de personnage !', ephemeral: true });
       return;
     }
@@ -28,7 +29,7 @@ module.exports = {
       return mod;
     }
 
-    user = interaction.options.getUser('user').id;
+   
 
     //get the character sheet of the user inside data
     const charSheet = charSheets[user]

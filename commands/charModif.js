@@ -49,8 +49,16 @@ module.exports = {
             newUserId = interaction.options.getUser('user').id;
 
             charSheets[newUserId] = {
-            };
-            await interaction.reply({ content: 'L\'utilisateur n\'avait pas de fiche de personnage, il a été ajouté !', ephemeral: true });
+                "name":"",
+                "race":"", 
+                "hp":0 ,
+                "class":"",
+                "level":"0",
+                "skills":[""],
+                "stats":{"Force":0,"Dextérité":0,"Constitution":0,"Intelligence":0,"Sagesse":0,"Charisme":0},
+                "spells":[""]
+            }
+            await interaction.reply({ content: charSheets, ephemeral: true });
             return;
         }
 

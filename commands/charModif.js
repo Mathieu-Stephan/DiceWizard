@@ -71,6 +71,7 @@ module.exports = {
 
         //checks for each parameter if the value is valid
         if(param == 'name'){
+            console.log(interaction.options.getString('valeur').length);
             if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
@@ -153,6 +154,8 @@ module.exports = {
         else{
             charSheets[interaction.options.getUser('user').id][interaction.options.getString('paramètre')] = interaction.options.getString('valeur');
         }
+
+        console.log(JSON.stringify(charSheets));
 
         //writes the new data in charSheets.json
         fs.writeFile('./charSheets.json', JSON.stringify(charSheets), (err) => {

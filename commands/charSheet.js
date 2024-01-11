@@ -25,6 +25,7 @@ module.exports = {
 
     //get the character sheet of the user inside data
     const charSheet = charSheets[interaction.user.id];
+    console.log(JSON.stringify(charSheet));
     //create the embed
     let nom = charSheet.name;
     let classe = charSheet.class;

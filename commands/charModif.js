@@ -71,7 +71,7 @@ module.exports = {
 
         //checks for each parameter if the value is valid
         if(param == 'name'){
-            console.log(interaction.options.getString('valeur').length);
+            console.log("test" + interaction.options.getString('valeur').length);
             if(interaction.options.getString('valeur').length > 40){
                 await interaction.reply({ content: 'Le nom est trop long !', ephemeral: true });
                 return;
@@ -162,6 +162,10 @@ module.exports = {
             if (err) console.log(err);
         }
         );
+
+        charSheets = JSON.parse(fs.readFileSync('./charSheets.json', 'utf8'));
+
+        console.log(JSON.stringify(charSheets));
 
         //sends a confirmation message
         await interaction.reply({ content: 'La fiche de personnage a bien été modifiée !', ephemeral: true });

@@ -50,14 +50,14 @@ module.exports = {
             newUserId = interaction.options.getUser('user').id;
 
             charSheets[newUserId] = {
-                "name":"",
-                "race":"", 
+                "name":"Rien",
+                "race":"Aucune", 
                 "hp":0 ,
-                "class":"",
+                "class":"Aucune",
                 "level":"0",
-                "skills":[""],
+                "skills":[" "],
                 "stats":{"Force":0,"Dextérité":0,"Constitution":0,"Intelligence":0,"Sagesse":0,"Charisme":0},
-                "spells":[""]
+                "spells":[" "]
             }
 
             //writes the new data in charSheets.json

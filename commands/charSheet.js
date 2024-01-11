@@ -33,7 +33,6 @@ module.exports = {
 
     //get the character sheet of the user inside data
     const charSheet = charSheets[user]
-    console.log(JSON.stringify(charSheet));
     //create the embed
     let nom = charSheet.name;
     let classe = charSheet.class;
@@ -53,7 +52,6 @@ module.exports = {
       statsReady.push(stat + ": " + stats[stat] + " (" + modifier(stats[stat]) + ")");
     }
 
-    console.log(nom + " " + classe)
 
     competencesReady = competencesReady.replace(/,/g, ', ');
     sortsReady = sortsReady.replace(/,/g, ', ');

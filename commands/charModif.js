@@ -45,7 +45,12 @@ module.exports = {
         const charSheets = JSON.parse(fs.readFileSync('./charSheets.json', 'utf8'));
         //check if the user has a character sheet
         if (!(interaction.options.getUser('user').id in charSheets)) {
-            await interaction.reply({ content: 'Cet utilisateur n\'a pas de fiche de personnage !', ephemeral: true });
+            // add the user to charSheets.json
+            newUserId = interaction.options.getUser('user').id;
+
+            charSheets[newUserId] = {
+            };
+            await interaction.reply({ content: 'L\'utilisateur n\'avait pas de fiche de personnage, il a été ajouté !', ephemeral: true });
             return;
         }
 

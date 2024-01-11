@@ -45,6 +45,8 @@ module.exports = {
         const charSheets = JSON.parse(fs.readFileSync('./charSheets.json', 'utf8'));
         //check if the user has a character sheet
         if (!(interaction.options.getUser('user').id in charSheets)) {
+
+            console.log("test");
             // add the user to charSheets.json
             newUserId = interaction.options.getUser('user').id;
 

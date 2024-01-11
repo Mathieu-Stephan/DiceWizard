@@ -45,6 +45,7 @@ module.exports = {
       statsReady.push(stat + ": " + stats[stat] + " (" + modifier(stats[stat]) + ")");
     }
 
+    console.log(nom + " " + classe)
 
     competencesReady = competencesReady.replace(/,/g, ', ');
     sortsReady = sortsReady.replace(/,/g, ', ');

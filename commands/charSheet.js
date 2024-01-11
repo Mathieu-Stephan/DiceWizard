@@ -71,7 +71,7 @@ module.exports = {
       .setTimestamp()
     //send the embed
     await interaction.deferReply({ ephemeral: false });
-    interaction.editReply({ embeds: [text] });
+    interaction.editReply({ embeds: [embed], ephemeral: false });
 
 
 

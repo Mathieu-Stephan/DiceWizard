@@ -8,13 +8,9 @@ var http = require('http');
 const { text } = require("stream/consumers");
 
 http.createServer(function(req, res) {
-  res.write("DnD time !");
+  res.write("Donjons et Dragon, la grande aventure !");
   res.end();
-}).listen(8080);
-
-app.listen(3000, () => {
-  console.log("Donjons et Dragon, la grande aventure !");
-});
+}).listen(8686);
 
 const codeHtml = fs.readFileSync("./index.html", "utf8");
 
@@ -116,4 +112,4 @@ client.on(Events.InteractionCreate, interaction => {
   }
 });
 
-client.login(process.env.token);
+client.login(process.env.dicewizardToken);

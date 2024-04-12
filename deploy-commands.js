@@ -12,7 +12,7 @@ for (const file of commandFiles) {
 }
 
 // Construct and prepare an instance of the REST module
-const rest = new REST({ version: '10' }).setToken(process.env.token);
+const rest = new REST({ version: '10' }).setToken(process.env.dicewizardToken);
 
 // and deploy your commands!
 (async () => {
@@ -22,7 +22,7 @@ const rest = new REST({ version: '10' }).setToken(process.env.token);
     // The put method is used to fully refresh all commands in the guild with the current set
     console.log(commands);
     const data = await rest.put(
-      Routes.applicationCommands(process.env.clientId),
+      Routes.applicationCommands(process.env.dicewizardClientId),
       { body: commands },
     );
 

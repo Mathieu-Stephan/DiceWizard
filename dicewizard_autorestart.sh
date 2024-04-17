@@ -8,7 +8,7 @@ while true; do
     sleep 4
   fi
 
-  echo "Starting the application foudre..."
+  echo "Starting the application DiceWizard..."
   npm run start
   EXIT_CODE=$?
   if [ $EXIT_CODE -ne 0 ]; then

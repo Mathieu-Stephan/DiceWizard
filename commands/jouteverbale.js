@@ -99,7 +99,7 @@ module.exports = {
         }
         else {
             await interaction.reply(
-                `${target}, ${jouteVerbale[Math.floor(Math.random() * jouteVerbale.length)]} ${target}`
+                `${target}, ${jouteVerbale[Math.floor(Math.random() * jouteVerbale.length)]}`
               )
         }
     }

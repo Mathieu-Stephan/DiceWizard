@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "export $(cat .env | xargs) && node deploy-commands.js",
     "start": "export $(cat .env | xargs) && node ."
   },
   "keywords": [],

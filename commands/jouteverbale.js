@@ -68,7 +68,16 @@ const jouteVerbale = [
     " ta générosité est aussi mince que les pièces d'or d'un mendiant!",
     " que ton courage soit aussi défaillant que celui d'un soldat face à un dragon!",
     " ton intelligence égale celle d'un gobelin dans une taverne!",
-    " que ta présence soit aussi déplaisante qu'une hydre lors d'un banquet!"
+    " que ta présence soit aussi déplaisante qu'une hydre lors d'un banquet!",
+    " on va maintenant de te laisser dans la fange, là où est ta place.",
+    "! En garde, infâme déchet !",
+    ", tu n’es pas déchu car tu es laid mon brave, mais parce que tu ne pourras jamais te relever.",
+    ", les charognes attirent les charognards, je serai heureux de débarrasser la région de ta puanteur.",
+    ", pas si près, ton haleine viciée m’indispose.",
+    ", si ton courage égale ton incompétence, tu fais partie des plus braves.",
+    " on dit qu’un scélérat vit dans un trou, retourne donc dans le tien.",
+    " sale gredin ! Je vais t’occire ! ",
+    " rassures-toi, tu es aussi charmant que vif d’esprit"
 ];
 
 const compliments = [
